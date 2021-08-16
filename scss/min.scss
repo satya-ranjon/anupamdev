@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     font-family: 'Roboto', sans-serif;
+
+}
+$text:#a5bad0;
+body{
+     font-family: 'Roboto', sans-serif;
+     background-color: #161b1b;
+}
+.theme_text{
+color: #b1ae51;
+}
+.typer{
+     color: #b1ae51;
+     margin-top: 3vh;
+}
+
+header{
+     .header_top{
+          nav{
+               ul{
+                    display: flex;
+                    // float: right;
+                    justify-content: center;
+                    li{
+                         list-style: none;
+                         padding: 3vh;
+
+                         a{
+                              text-decoration: none;
+                              font-size: 22px;
+                              font-weight: 500;
+                              margin: 0;
+                              color: $text;
+                              &:hover{
+                                   color: #727b85;
+                                   transition: all .4s;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     .header__text_box{
+          padding: 10vh;
+          h3{
+               color: $text;
+               font-weight: 300;
+               .wave{
+                    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+                    animation-duration: 2.1s; /* Change to speed up or slow down */
+                    animation-iteration-count: infinite; /* Never stop waving :) */
+                    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+                    display: inline-block;
+               }
+          }
+          h1{
+               text-transform: uppercase;
+               color: $text;
+               letter-spacing: 4px;
+          }
+          #typer{
+               color: #b16c51;
+               margin-top: 3vh;
+          }
+     }
+}
+
+@keyframes wave-animation {
+     0% {
+       transform: rotate(0deg);
+     }
+     10% {
+       transform: rotate(14deg);
+     } /* The following five values can be played with to make the waving more or less extreme */
+     20% {
+       transform: rotate(-8deg);
+     }
+     30% {
+       transform: rotate(14deg);
+     }
+     40% {
+       transform: rotate(-4deg);
+     }
+     50% {
+       transform: rotate(10deg);
+     }
+     60% {
+       transform: rotate(0deg);
+     } /* Reset for the last half to pause */
+     100% {
+       transform: rotate(0deg);
+     }
+   }
